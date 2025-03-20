@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🟠 CometVerse - Jindal School Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <!-- Top Bar with Home Button, Centered Heading, and Fun Fact Button -->
+    <div class="top-bar">
+        <button id="homeButton" class="home-btn">🏠</button>
+        <h1>CometVerse - Your Jindal School Chatbot</h1>
+        <button id="funFactButton" class="fun-fact-btn">💡</button>
+    </div>
+
+    <!-- Fun Fact Popup in Bottom-Right Corner -->
+    <div id="funFactPopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">×</span>
+            <p id="funFactText"></p>
+        </div>
+    </div>
+
+    <!-- Confirmation Popup for Starting Over -->
+    <div id="confirmPopup" class="popup">
+        <div class="popup-content">
+            <span id="closeConfirmPopup" class="close">×</span>
+            <p>Are you sure you want to start a new session? This will clear your current chat history.</p>
+            <div class="popup-buttons">
+                <button id="confirmYes" class="confirm-btn confirm-yes">Yes</button>
+                <button id="confirmNo" class="confirm-btn confirm-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Chat Section -->
+        <div id="chatSection">
+            <div id="chatMessages" class="chat-messages">
+                <!-- Chat messages will be dynamically added here -->
+                <div class="chat-message bot-message">
+                    <p>Welcome to CometVerse! Ask me anything about the Jindal School of Management.</p>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <textarea id="questionInput" placeholder="Ask a question about the Jindal School of Management..." class="chat-input"></textarea>
+                <button id="sendButton" class="send-button">➤</button>
+                <button id="voiceButton" class="voice-button">🎤</button>
+            </div>
+        </div>
+
+        <!-- Stop Session Section -->
+        <div id="stopSection" class="session-section" style="display: none;">
+            <button onclick="saveAsPDF()" class="save-pdf-button btn-3d">Save as PDF</button>
+            <button onclick="startOver()" class="start-over-button btn-3d">Start Over</button>
+        </div>
+    </div>
+
+    <!-- Social Media Footer -->
+    
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
