@@ -70,20 +70,7 @@ To view the technical architecture and product market study [View Full Project R
 - Adjust `max_entries`, `max_content_length`, and `max_tokens` in `app.py` to manage token limits for the Groq API.
 - Modify the port in `app.run()` if needed (default is 5001).
 
-## Contributing
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m "Description of changes"`.
-4. Push to the branch: `git push origin feature-name`.
-5. Open a pull request.
-
-## License
-[MIT License](LICENSE) (or specify your preferred license).
-
 ## Acknowledgments
 - Groq API for AI capabilities.
 - gTTS for text-to-speech functionality.
 - UT Dallas Jindal School of Management for the content inspiration.
-
-## Issues
-Report any bugs or feature requests in the [Issues](https://github.com/your-username/your-repo/issues) tab.
